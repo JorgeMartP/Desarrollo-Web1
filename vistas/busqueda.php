@@ -24,19 +24,19 @@
 </html>
 <?php
 
-#if(isset($_GET['search'])){
- #   $mibusqueda=$_GET['search'];
-  #  ejecutar_consulta($mibusqueda);
-#}
-$mipagina=$_SERVER['PHP_SELF'];
-if($mibusqueda!=NULL){
-    
-}else{
-    echo("<form action='".$mipagina."'method='get'
-    <label>Buscar:<input type= 'text' name='buscar></label>
-    input type='submit' name='search' value='Enviar'>
-    </form>");
+if(isset($_GET['search'])){
+    $mibusqueda=$_GET['search'];
+    ejecutar_consulta($mibusqueda);
 }
+#$mipagina=$_SERVER['PHP_SELF'];
+#if($mibusqueda!=NULL){
+    
+#}else{
+ #   echo("<form action='".$mipagina."'method='get'
+  #  <label>Buscar:<input type= 'text' name='buscar></label>
+   # input type='submit' name='search' value='Enviar'>
+    #</form>");
+#}
 function ejecutar_consulta($laconsulta){
 include('../conexion.php');
 $consulta1= "SELECT * FROM productos WHERE producto LIKE '%$laconsulta%'";
