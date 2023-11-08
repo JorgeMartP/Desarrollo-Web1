@@ -1,0 +1,13 @@
+
+table{
+    width:50%;
+    border: #000 1px solid;
+    margin: auto;
+}
+.input-group{
+    padding-top: 10px;
+}
+form .btn{
+    position: absolute;
+    left: 20px;
+}
